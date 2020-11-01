@@ -1,0 +1,377 @@
+body{
+  font-family: "Poppins";
+}
+
+#header{
+  background-image: url("../images/Hero/Background.png");
+  background-repeat: no-repeat;
+  background-size: cover; 
+  min-height:100%;
+}
+
+.img-heading{
+  width: 100%;
+  margin-left: 70px;
+}
+
+.container-fluid{
+  padding: 0% 10%;
+}
+
+#header .container-fluid .row{
+  padding-left: 15px;
+}
+
+.heading-title{
+  padding-top: 200px;
+}
+
+.text-heading{
+  font-size: 3.5rem;
+  font-weight: 900;
+  line-height: 1.5;
+}
+
+.navbar{
+  padding-top: 0;
+  padding-bottom: 70px;
+}
+
+.navbar-brand{
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+
+.navbar-brand img{
+  width: 20%;
+}
+
+.nav-item{
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 5px;
+}
+
+.toggle-down{
+  font-size: 0.8rem;
+  margin-left: 5px;
+}
+
+#press{
+  background-color: white;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+#press .container-fluid{
+  padding: 0 15%;
+}
+
+.press-icon{
+  width: 8%;
+  margin: 30px 20px;
+}
+
+#features{
+  background-color: white;
+  text-align: center;
+}
+
+#features .container-fluid{
+  padding: 2% 10%;
+}
+
+#features h2{
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+
+#features p{
+  padding: 0 280px;
+}
+
+#features .row p{
+  font-size: 0.9rem;
+  padding: 0;
+}
+
+#features .row img{
+  width: 10%;
+  margin-bottom: 15px;
+}
+
+#features .row{
+  padding-top: 50px;
+}
+
+#features h3{
+  line-height: 1.5;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+#quote{
+  background-color: #62eafc;
+}
+
+#quote .container-fluid{
+  padding: 5% 15%;
+}
+
+#quote p{
+  font-size: 0.9rem;
+  padding-left: 80px;
+}
+
+.img-hubspot{
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+}
+
+.img-book{
+  margin-left: 10px;
+}
+
+#quote h2{
+  padding-left: 80px;
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+
+#statistics{
+  background-color: white;
+}
+
+#statistics .container-fluid{
+  padding: 5% 10%;
+}
+
+#statistics .achievements{
+  padding-right: 100px;
+}
+
+#statistics .icon-statistic{
+  float: left;
+  padding: 10px;
+  width: 50px;
+}
+
+#statistics h2{
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+#statistics h3{
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+#statistics .row .row p{
+  font-size: 0.8rem;
+}
+
+#statistics p{
+  font-size: 0.9rem;
+}
+
+#headline{
+  background-color: white;
+}
+
+#headline .container-fluid{
+  padding: 5% 10%;
+}
+
+#headline h2{
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 3;
+}
+
+#headline .col-lg-12{
+  padding-left: 30px;
+}
+
+#headline p{
+  font-size: 1.1rem;
+  line-height: 2;
+}
+
+#headline .started{
+  color: #963ce6;
+  padding-left: 30px;
+}
+
+.info-headline{
+  padding-left: 30px;
+  padding-top: 100px;
+}
+
+.img-headline{
+  width: 100%;
+}
+
+#trends{
+  background-color: white;
+}
+
+#trends .container-fluid{
+  padding: 5% 10%;
+}
+
+#trends .fashion-trends{
+  padding-right: 10px;
+}
+
+#trends .col-lg-6{
+  padding: 20px;
+}
+
+#trends h2{
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+#trends p{
+  line-height: 2;
+}
+
+.cover-trends{
+  width: 100%;
+}
+
+#download-app{
+  background-color: #19abfa;
+}
+
+#download-app .container-fluid{
+  padding: 5% 10%;
+}
+
+#download-app h2{
+  font-size: 2.5rem;
+  font-weight: 900;
+  line-height: 1.5;
+}
+
+#download-app h3{
+  padding-top: 100px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+#download-app .download-button{
+  margin-top: -40px;
+}
+
+.mockup-1, .mockup-2{
+  position: absolute;
+  width: 100%;
+}
+
+.mockup-1{
+  bottom: -330px;
+}
+
+.mockup-2{
+  bottom: -495px;
+}
+
+.btn-purple{
+  background-color: #963ce6;
+  border: none;
+  padding: 15px 30px;
+}
+
+#footer{
+  background-color: #0d111f;
+  color: #fff;
+}
+
+#footer .container-fluid{
+  padding: 5% 10%;
+}
+
+#footer .footer-download{
+  padding-left: 400px;
+}
+
+.footer-download img{
+  margin-top: -40px;
+}
+
+.footer-download .img-footer-apple{
+  margin-top: -80px;
+}
+
+#footer p{
+  padding-top: 15px;
+}
+
+#footer .footer-link{
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  padding: 14px;
+}
+
+@media (max-width: 990px){
+  body{
+    text-align: center;
+  }
+  #header .container-fluid .row{
+    padding-left: 0;
+  }
+  .img-heading{
+    padding: 10px;
+    margin-left: 0;
+  }
+  #features p{
+    padding: 0;
+  }
+  .img-hubspot, .mockup-1, .mockup-2{
+    position: static;
+  }
+  .img-book{
+    margin-left: 0;
+  }
+  #quote h2, #quote p{
+    padding-left: 0;
+  }
+  #statistics .icon-statistic{
+    float: none;
+  }
+  #statistics .achievements{
+    padding-right: 0;
+  }
+  #footer .footer-link{
+    text-align: center;
+  }
+  #footer .footer-download{
+    padding-left: 0;   
+  }
+  .footer-download .img-footer-apple{
+    margin-top: -40px;
+  }
+  .footer-list-up, .footer-list-down{
+    padding-left: 175px;
+  }
+  .footer-list-mid{
+    padding-left: 25px;
+  }
+}
+
+@media all and (max-width: 480px){
+  .img-heading{
+    padding: 10px;
+    margin-left: 0;
+  }
+  .footer-list-up, .footer-list-down{
+    padding-left: 50px;
+  }
+  .footer-list-mid{
+    padding-left: 0;
+  }
+}

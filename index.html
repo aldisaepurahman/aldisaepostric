@@ -3,77 +3,296 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luxury Hotels</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Merriweather|Montserrat|Sacramento"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/style.css">
+    <title>Landify</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Poppins" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="top-container">
-        <div class="navigation">
-            <a href="#" class="nav-logo">LUXURY</a>
-            <div class="nav-right">
-              <a href="#" class="active">Home</a>
-              <a href="#">Facilities</a>
-              <a href="#">Rooms</a>
-              <a href="#">Contact</a>
+    <section id="header">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="#">
+                    <img src="images/Hero/Header/Logotype/Logomark/Color.png"> Landify
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#">Products</a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#">Blog</a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#">Jobs</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            More <i class="fas fa-chevron-down toggle-down"></i>
+                        </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                    </li>
+                  </ul>
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">
+                          <img src="images/Logo Clouds/google-play-badge.png">
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">
+                        <img src="images/Logo Clouds/apple.png">
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+              <!-- Title -->
+              <div class="row">
+                <div class="col-lg-6 col-12 heading-title">
+                  <h1 class="text-heading">Organise projects. Get more done</h1>
+                  <button type="button" class="btn btn-dark btn-lg btn-purple"> Get Started</button>
+                </div>
+                <div class="col-lg-6 col-12">
+                  <img class="img-heading" src="images/CTA/Phone Mockup 2.png" alt="iphone-mockup">
+                </div>
+              </div> 
+        </div>
+    </section>
+
+    <section id="press">
+        <div class="container-fluid">
+            <hr>
+          <img src="images/Logo Clouds/Airbnb Logo.png" alt="tc-logo" class="press-icon">
+          <img src="images/Logo Clouds/Hubspot Logo.png" alt="tnw-logo" class="press-icon">
+          <img src="images/Logo Clouds/Google Logo.png" alt="biz-insider-logo" class="press-icon">
+          <img src="images/Logo Clouds/Microsoft Logo.png" alt="mashable-logo" class="press-icon">
+          <img src="images/Logo Clouds/Walmart Logo.png" alt="mashable-logo" class="press-icon">
+          <img src="images/Logo Clouds/FedEx Logo.png" alt="mashable-logo" class="press-icon">
+          <hr>
+        </div>
+      </section>
+
+    <section id="features">
+        <div class="container-fluid">
+            <h2>Tailor-made features</h2>
+            <p>
+              Lorem ipsum is common placeholder text used to demonstrate
+              the graphic elements of a document or visual presentation
+            </p>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img src="images/Feature/Multiple/Feature Icons/01.png">
+                  <h3>Robust workflow</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur
+                      adipiscing elit. Sed erat nibh tristique ipsum.</p>
+                </div>
+                <div class="col-lg-4">
+                    <img src="images/Feature/Multiple/Feature Icons/Group.png">
+                  <h3>Flexibilty</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Sed erat nibh tristique ipsum.</p>
+                </div>
+                <div class="col-lg-4">
+                    <img src="images/Feature/Multiple/Feature Icons/Group.png">
+                  <h3>User friendly</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Sed erat nibh tristique ipsum.</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-4">
+                    <img src="images/Feature/Multiple/Feature Icons/Group.png">
+                  <h3>Multiple layouts</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Sed erat nibh tristique ipsum.</p>
+                </div>
+                <div class="col-lg-4">
+                    <img src="images/Feature/Multiple/Feature Icons/01.png">
+                  <h3>Better components</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Sed erat nibh tristique ipsum.</p>
+                </div>
+                <div class="col-lg-4">
+                    <img src="images/Feature/Multiple/Feature Icons/Group.png">
+                  <h3>Well organised</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Sed erat nibh tristique ipsum.</p>
+                </div>
+              </div>
+        </div>
+    </section>
+    <section id="quote">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2>Real Stories from Real Customers</h2>
+                    <p>Get inspired by these stories</p>
+                </div>
+                <div class="col-lg-6">
+                    <img src="images/Hero/airbnbquote.png" class="img-airbnb">
+                </div>
+                <div class="col-lg-6">
+                    <img src="images/Hero/hubspotquote.png" class="img-hubspot">
+                </div>
+                <div class="col-lg-6">
+                    <img src="images/Hero/bookquote.png" class="img-book">
+                </div>
             </div>
         </div>
-        <div class="headers">
-            <h2>WELCOME TO</h2>
-            <h1>LUXURY</h1>
-            <h3>HOTELS</h3>
-            <p>
-                Book your stay and enjoy luxury
-                redifined at the most affordable rates
-            </p>
+    </section>
+    <section id="statistics">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6 achievements">
+                    <h2>Our 18 years of achievements</h2>
+                    <p>With our super powers we have reached this</p>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <img src="images/Feature/Multiple/Feature Icons/01.png" class="icon-statistic">
+                            <h3>10,000+</h3>
+                            <p>Downloads per day</p>
+                        </div>
+                        <div class="col-lg-6">
+                            <img src="images/Stats/Feature Icons/Group.png" class="icon-statistic">
+                            <h3>2 Million</h3>
+                            <p>Users</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <img src="images/Feature/Multiple/Feature Icons/01.png" class="icon-statistic">
+                            <h3>500+</h3>
+                            <p>Clients</p>
+                        </div>
+                        <div class="col-lg-6">
+                            <img src="images/Stats/Feature Icons/Group.png" class="icon-statistic">
+                            <h3>140</h3>
+                            <p>Countries</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <a href="#" class="buttons">BOOK NOW</a>
-    </div>
-    <div class="middle-container">
-        <div class="title">
-            <p>All our room types are including complementary breakfast</p>
+    </section>
+    <section id="headline">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6">
+                    <img src="images/Feature/Single/Phone Mockup.png" class="img-headline">
+                </div>
+                <div class="col-lg-6 info-headline">
+                    <div class="col-lg-12">
+                        <h2>Headline</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit. Condimentum diam orci pretium a pharetra,
+                            feugiat cursus. Dictumst risus, sem egestas odio cras
+                            adipiscing vulputate. Nisi, risus in suscipit non. Non
+                            commodo volutpat, pharetra, vel.
+                        </p>
+                    </div>
+                    <button type="button" class="btn btn-outline-light btn-lg started">Get Started <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
         </div>
-        <div class="menu">
-            <img src="images/luxury.png">
-            <h2>Luxury Redifined</h2>
-            <p>
-                Our rooms are designed to transport you
-                into an environment made for leisure.
-                Take your mind off the day-to-day of
-                home life and find a private paradise for
-                yourself.
-            </p>
-            <a href="#" class="buttons">EXPLORE</a>
+    </section>
+    <section id="trends">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6 fashion-trends">
+                    <h2>Enter the world of all fashion trends</h2>
+                </div>
+                <div class="col-lg-6">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Venenatis scelerisque at quam congue posuere libero in sit
+                        quam. Consequat, scelerisque non tincidunt sit lectus senectus.
+                    </p>
+                </div>
+                <div class="col-lg-12">
+                    <img src="images/Feature/Single/Cover Image.png" class="cover-trends">
+                </div>
+            </div>
         </div>
-        <div class="menu">
-            <img src="images/leave your worries.png">
-            <h2>Leaves your worries in the sand</h2>
-            <p>
-                We love life at the beach. Being close to
-                the ocean with access to endless sandy
-                beach ensures a relaxed state of mind. It
-                seems like time stands still watching the
-                ocean.
-            </p>
-            <a href="#" class="buttons">EXPLORE</a>
+    </section>
+    <section id="download-app">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2>Manage your projects from your mobile</h2>
+                    <p>
+                        Download the app to manage your projects, keep track of the
+                        progress and complete tasks without procastinating. Stay on
+                        track and complete on time!
+                    </p>
+                    <h3>Get the App</h3>
+                    <img src="images/Logo Clouds/google-play-badge.png" class="download-button">
+                    <img src="images/Logo Clouds/apple.png" class="download-button">
+                </div>
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <img src="images/CTA/Phone Mockup 1.png" class="mockup-1">
+                        </div>
+                        <div class="col-lg-6">
+                            <img src="images/CTA/Phone Mockup 2.png" class="mockup-2">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="testimonial">
-            <h2>Testimonials</h2>
-            <h3>
-                "Calm, Serene, Retro - What a way to relax and
-                enjoy"
-            </h3>
-            <p>Mr. and Mrs. Baxter, UK</p>
-            <a href="#" class="buttons-icon">&#10094</a>
-            <a href="#" class="buttons-icon">&#10095</a>
+    </section>
+    <footer id="footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6 footer-menu">
+                    <img src="images/Hero/Header/Logotype/Logomark/Color.png">
+                    <div class="row footer-list-up">
+                        <a href="#" class="footer-link">Download Now</a>
+                        <a href="#" class="footer-link">License</a>
+                    </div>
+                    <div class="row footer-list-mid">
+                        <a href="#" class="footer-link">About</a>
+                        <a href="#" class="footer-link">Features</a>
+                        <a href="#" class="footer-link">Pricing</a>
+                        <a href="#" class="footer-link">Careers</a>
+                        <a href="#" class="footer-link">Help</a>
+                        <a href="#" class="footer-link">Privacy Policy</a>
+                    </div>
+                    <p>© 2020 Landify UI Kit. All rights reserved</p>
+                    <div class="row footer-list-down">
+                        <a href="http://aravind.design" class="footer-link">Design By Aravind Little Jack</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 footer-download">
+                    <p>Get the App</p>
+                    <img src="images/Logo Clouds/google-play-badge.png">
+                    <img src="images/Logo Clouds/apple.png" class="img-footer-apple">
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="bottom-container">
-        <a href="https://instagram.com/aldisaep_" class="footer-link">Made By Aldi Saepurahman</a>
-        <a href="https://www.behance.net/mcsteph" class="footer-link">Design By Ayokunie Oriolowo</a>
-    </div>
+    </footer>
 </body>
 </html>
