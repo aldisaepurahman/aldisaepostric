@@ -1,74 +1,117 @@
 <?php
-include ("assets/connection.php");
 
-$sql = "SELECT * FROM buku";
-$result = mysqli_query($conn, $sql);
+class Armor{
+    private $name;
+    private $defence;
 
-if (!$result) {
-    die("Could not get data buku: ". mysqli_error($conn));
+    public function __construct($name, $defence)
+    {
+        $this->name = $name;
+        $this->defence = $defence;
+    }
+
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    public function getDefence()
+    {
+        return $this->defence;
+    }
 }
-?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peminjaman Buku</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/style.css">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-</head>
-<body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="index.php">Peminjaman <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="datapinjam.php">Pengembalian</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="bayar.php">Pembayaran</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-<div class="container-fluid">
-    <h1 class="text-center mb-3">Data Buku</h1>
-    <div class="col-md-12">
-    <table class="table">
-  <thead class="thead-dark">
-    <tr>
-      <th scope="col">No</th>
-      <th scope="col">Judul Buku</th>
-      <th scope="col">Action</th>
-    </tr>
-  </thead>
-  <tbody>
-  <?php
-        $i = 1;
-        while ($data = mysqli_fetch_array($result)) { ?>
-    <tr>
-      <th scope="row"><?php echo $i++; ?></th>
-      <td><?php echo $data['judul']; ?></td>
-      <td>
-            <a href="detailbuku.php?id=<?php echo $data['id']; ?>"
-            class="btn btn-info">Detail</a>
-      </td>
-    </tr>
-    <?php
-        }
-    ?>
-  </tbody>
-</table>
-    </div>
-</div>
-</body>
-</html>
+class Weapon{
+    private $name;
+    private $power;
+
+    public function __construct($name, $power)
+    {
+        $this->name = $name;
+        $this->power = $power;
+    }
+
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    public function getPower()
+    {
+        return $this->power;
+    }
+}
+
+class Robot{
+    private $name;
+    private $health;
+    private $weapon;
+    private $armor;
+
+    public function __construct($name, $health, Weapon $weapon, Armor $armor){
+        $this->name = $name;
+        $this->weapon = $weapon;
+        $this->armor = $armor;
+        $this->health = $health + $this->armor->getDefence();
+    }
+
+    public function getPower()
+    {
+        return $this->weapon->getPower();
+    }
+
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    public function getMaxHealth()
+    {
+        return $this->health;
+    }
+
+    public function attack($health, $power)
+    {
+        $this->health = $health - $power;
+        return $this->health;
+    }
+}
+
+$armor1 = new Armor("Baja", 1500);
+$armor2 = new Armor("Besi", 1000);
+
+$weapon1 = new Weapon("AK47", 400);
+$weapon2 = new Weapon("Golok", 100);
+
+$robot1 = new Robot("Bot_kill", 2000, $weapon1, $armor2);
+$robot2 = new Robot("Bot_gomis", 2000, $weapon2, $armor1);
+
+echo "<b>Nama</b> : ". $robot1->getName() ." / <b>Max Health</b> : ". $robot1->getMaxHealth().
+" vs <b>Nama</b> : ". $robot2->getName() ." / <b>Max Health</b> : ". $robot2->getMaxHealth() . "<br>";
+echo "<br>";
+$turns = 1;
+while (($robot1->getMaxHealth() > 0) && ($robot2->getMaxHealth() > 0)) {
+    if ($turns == 1) {
+        echo "<b>". $robot1->getName()."</b> menyerang, Health <b>".
+        $robot2->getName() . "</b> berkurang menjadi ".
+        $robot2->attack($robot2->getMaxHealth(), $robot2->getPower());
+        $turns = 2;
+    }
+    else if ($turns == 2) {
+        echo "<b>". $robot2->getName()."</b> menyerang, Health <b>".
+        $robot1->getName() . "</b> berkurang menjadi ".
+        $robot1->attack($robot1->getMaxHealth(), $robot1->getPower());
+        $turns = 1;
+    }
+    echo "<br>";
+}
+echo "<br>";
+
+if ($robot1->getMaxHealth() > 0) {
+    echo "<b>". $robot1->getName() ." MENANG!</b";
+}
+else if ($robot2->getMaxHealth() > 0) {
+    echo "<b>". $robot2->getName() ." MENANG!</b";
+}
+
+?>
